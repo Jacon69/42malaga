@@ -1,0 +1,46 @@
+# Nombre del programa ejecutable
+TARGET = $(BIN_DIR)/ft_strlcpy
+# Nombre de la biblioteca
+LIB_NAME = $(BIN_DIR)/libft.a
+
+# Directorios de búsqueda de archivos fuente e inclusión
+SRC_DIR = ./src
+INC_DIR = ./include
+OBJ_DIR = ./obj
+BIN_DIR = ./bin
+
+
+# Compilador
+CC = gcc
+
+# Opciones de compilación
+CFLAGS = -Wall -Wextra -Werror
+
+# Directorios de búsqueda de archivos fuente e inclusión
+SRC_DIR = ./
+INC_DIR = ./
+
+# Archivos fuente
+SOURCES = $(wildcard $(SRC_DIR)/*.c)
+
+# Archivos objeto generados
+OBJECTS = $(SOURCES:$(SRC_DIR)/%.c=%.o)
+
+# Regla principal para construir el programa
+$(TARGET): $(OBJECTS)
+	mkdir -p $(BIN_DIR)
+	$(CC) $(CFLAGS) -I$(INC_DIR) -o $@ $^
+	-include $(OBJ.DIR)*.d    # Meto la Opcion .MD para que genere archivos .d que me indican depaendencia donde salen los .h
+
+# Regla para compilar archivos fuente en archivos objeto
+%.o: $(SRC_DIR)/%.c
+	$(CC) $(CFLAGS) -I$(INC_DIR) -c -o $@ $<
+
+# Limpiar archivos generados
+clean:
+	rm -f $(OBJECTS)
+fclean: clean
+	rm -f $(TARGET) 
+re:	fclean all
+	# rn -r $(LIB_NAME)  # Borro la carpeta donde genero los exec
+.PHONY: clean fclean re

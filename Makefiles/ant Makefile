@@ -1,0 +1,67 @@
+
+
+
+# Nombre de la biblioteca
+NAME = $(BIN_DIR)/libft.a
+
+# Directorios de búsqueda de archivos fuente e inclusión
+SRC_DIR = .
+INC_DIR = ./include
+OBJ_DIR = ./obj
+BIN_DIR = .
+
+# Compilador y Opciones de compilación
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror # -I$(INC_DIR) #-I$ le indico donde guardo los fich.h
+
+# Archivos fuente #$(wildcard $(SRC_DIR)/*.c)
+SOURCES = $(SRC_DIR)/ft_isalpha.c \
+$(SRC_DIR)/ft_isalpha.c \
+$(SRC_DIR)/ft_isdigit.c \
+$(SRC_DIR)/ft_isalnum.c \
+$(SRC_DIR)/ft_isascii.c \
+$(SRC_DIR)/ft_isprint.c \
+$(SRC_DIR)/ft_strlen.c \
+$(SRC_DIR)/*ft_memset.c \
+$(SRC_DIR)/ft_bzero.c \
+$(SRC_DIR)/*ft_memcpy.c \
+$(SRC_DIR)/*ft_memmove.c \
+$(SRC_DIR)/ft_strlcpy.c \
+$(SRC_DIR)/ft_strlcat.c \
+$(SRC_DIR)/ft_toupper.c \
+$(SRC_DIR)/ft_tolower.c \
+$(SRC_DIR)/*ft_strchr.c \
+$(SRC_DIR)/*ft_strrchr.c \
+$(SRC_DIR)/ft_strncmp.c \
+$(SRC_DIR)/*ft_memchr.c \
+$(SRC_DIR)/ft_memcmp.c \
+$(SRC_DIR)/ft_strnstr.c \
+$(SRC_DIR)/*ft_toffsp.c \
+$(SRC_DIR)/*ft_calloc.c \
+$(SRC_DIR)/*ft_strdup.c
+
+# Archivos objeto generados 
+# $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SOURCES))
+
+OBJECTS = $(OBJ_DIR)/ft_isalpha.o \
+$(OBJ_DIR)/ft_isdigit.o 
+
+all: $(NAME)
+# Regla principal para construir la biblioteca
+$(NAME): $(OBJECTS) 	# mkdir -p $(BIN_DIR)
+	ar rcs $@ $^
+
+# Regla para compilar archivos fuente en archivos objeto
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	mkdir -p $(OBJ_DIR)
+	$(CC) -c -MD $(CFLAGS) -o $@ $<
+# -include $(OBJ.DIR)*.d    # Meto la Opcion .MD para que genere archivos .d que me indican depaendencia donde salen los .h 
+
+# Limpiar archivos generados
+clean:
+	rm -r $(OBJ_DIR)  #borro la carpeta donde se crea obj
+fclean: clean
+	rm -f $(NAME) #borro la librería ejecutable.
+re:	fclean all
+.PHONY:	clean all fclean re
+	
