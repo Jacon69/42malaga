@@ -6,7 +6,7 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:18:40 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/09/20 18:49:54 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/09/29 11:03:36 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,13 @@ char	*ft_strrchr(const char *s, int c)
 	char	*p;
 	int		aux;
 
+	c %= 256;
 	p = (char *)s;
 	aux = 0;
 	while (*p != '\0')
 		p++;
+	if (c == '\0')
+		return (p);
 	p--;
 	while ((p > (s - 1)) && (aux == 0))
 	{
@@ -50,4 +53,4 @@ char	*ft_strrchr(const char *s, int c)
 	c = 'a';
 	printf("Esta es la función original %s \n", strrchr(str,c));
 	printf("Esta es la función propia %s \n", ft_strrchr(str,c));
-} */
+}*/

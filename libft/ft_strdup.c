@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/21 06:55:00 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/09/21 10:26:53 by jconde-a         ###   ########.fr       */
+/*   Created: 2023/09/30 19:18:57 by jconde-a          #+#    #+#             */
+/*   Updated: 2023/10/01 05:31:05 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,33 @@
 
 char	*ft_strdup(const char *s1)
 {
-	size_t	cont;
-	size_t	ind;
+	size_t	len;
 	char	*ptr;
 
-	cont = ft_strlen((char *)s1);
-	ind = 0;
-	ptr = (void *)malloc(cont * sizeof(char));
-	if (ptr)
-	{
-		while (ind < cont)
-		{
-			ptr[ind] = s1[ind];
-			ind++;
-		}
+	len = ft_strlen((char *)s1);
+	if (!len)
+	{	
+		ptr = (char *)malloc(sizeof(char));
+		if (!ptr)
+			return (NULL);
+		*ptr = '\0';
+		return (ptr);
 	}
+	ptr = (char *)ft_calloc((len + 1), sizeof(char));
+	if (!ptr)
+		return (NULL);
+	ft_memmove(ptr, s1, len);
 	return (ptr);
 }
-/*
-int main(void)
+
+/*int main(void)
 {
-	char	*texto = "mi prueba";
-	
-	printf(" este es el resutado propio: %s \n",ft_strdup(texto));
-    printf(" este es el resutado original: %s \n",strdup(texto));
-	return 0;
+	char	*texto = "ljnlknñlkmn";
+
+	texto = ft_strdup(texto);
+	printf(" este es el resutado Propio: %s .\n",ft_strdup(texto));
+	free(texto);
+    //printf(" este es el resutado Original: %s .\n",strdup(texto));
+	//free(texto);
+	return (0);
 }*/

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jconde-a <jconde-a@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:34:21 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/09/18 22:12:39 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/09/29 08:39:07 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
+
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
@@ -18,24 +18,26 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	i = 0;
-	while ((i < dstsize - 1) && (src[i] == '\0'))
+	while ((i < dstsize - 1) && !(src[i] == '\0') && (dstsize != 0))
 	{
 		dst[i] = src [i];
 		i++;
 	}
-	dst[i] = '\0';
+	if (!(dstsize == 0))
+		dst[i] = '\0';
 	while (src[i] != '\0')
 	{
 		i++;
 	}
 	return (i);
 }
+
 /*int main (void)
 {
-	char str1[20]="Hola Mindo !!"; //origen 
-	char str2[5]="aaaaa"; //Destino
+	char src[20]="Hola Mindo !!"; //origen 
+	char dst[6]="aaaaa"; //Destino
 
-//	printf("esto es lo que devuelve original %zu \n", strlcpy(str2, str1,5));
-	printf("esto es lo que devuelve propia  %zu \n", ft_strlcpy(str2, str1,5));
-    printf("%s \n", str2);
+//	printf("esto es lo que devuelve original %zu \n", strlcpy(dst, src,0));
+	printf("esto es lo que devuelve propia  %zu \n", ft_strlcpy(dst, src,0));
+    printf("%s \n", dst);
 }*/

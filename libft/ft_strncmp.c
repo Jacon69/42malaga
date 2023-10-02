@@ -15,22 +15,24 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	ind;
+	size_t			ind;
+	unsigned char	*car1;
+	unsigned char	*car2;
 
+	car1 = (unsigned char *)s1;
+	car2 = (unsigned char *)s2;
 	ind = 0;
-	while (s1[ind] && s2[ind] && (ind < n) && (s1[ind] == s2[ind]))
+	while (car1[ind] && car2[ind] && (ind < n) && (car1[ind] == car2[ind]))
 	{
 		ind++;
 	}
-	if ((s1[ind] == s2[ind]) || (ind == n))
+	if ((car1[ind] == car2[ind]) || (ind == n))
 		return (0);
-	if (s1[ind] > s2[ind])
+	if (car1[ind] > car2[ind])
 		return (1);
 	return (-1);
 }
-
-/* 
- main (void)
+/*int main (void)
 {
 	char text1[1000];
 	char text2[1000]; 
@@ -49,5 +51,4 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = printf("La función mia ft_strncmp devuelve: %i.\n"
 		, ft_strncmp(text1, text2, n));
 	return (0);
-}
-*/
+}*/

@@ -6,47 +6,48 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:39:47 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/09/20 16:20:22 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/09/29 10:23:19 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	cont;
+	int		i;
+	size_t	tdes;
 
-	cont = 0;
-	while (*dst != '\0')
+	cont = ft_strlen(dst);
+	tdes = ft_strlen((char *) src);
+	if (cont > dstsize)
+		tdes += dstsize;
+	else
+		tdes += cont;
+	i = 0;
+	while ((*src != '\0') && (cont < dstsize - 1) && (dstsize != 0))
 	{
+		dst [cont] = src[i];
 		cont++;
-		dst++;
+		i++;
 	}
-	while ((*src != '\0') && (cont < dstsize - 1))
+	while (cont < dstsize)
 	{
-		*dst = *src;
+		dst [cont] = '\0';
 		cont++;
-		src++;
-		dst++;
 	}
-	*dst = '\0';
-	while (*src != '\0')
-	{
-		cont++;
-		src++;
-	}
-	return (cont);
+	return (tdes);
 }
-/*
-int main (void)
+/*int main (void)
 {
-	char	dst[35] = "Hola Mundo";
-	char	src[50] = " y a jaime pero no  me puedo esperar a verlo";
-	int		size;
-	size = 35;
-//	printf(" La función original devuelve \n %zu \n %s
-//	\n.", strlcat(dst, src, size), dst);
+	char	dst[15] = "";
+//	char	src[50] = "123456789012345"; //15
+	//int		size;
+	//size = 0;
+//	printf(" La funci,ón original devuelve \n %zu \n %s \n.",
+ strlcat(dst, "loren", 15), dst);
 	printf(" La función propia devuelve \n %zu \n %s \n.",
-	ft_strlcat(dst, src, size), dst);
+	 ft_strlcat(dst, "loren", 15), dst);
 }*/

@@ -6,7 +6,7 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:39:42 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/09/26 12:03:41 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/09/27 13:08:24 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_isalnum(int c)
 		return (0);
 	return (1);
 }
- /*int	main	(void)
+/*int	main	(void)
 {
 	printf("resultado %i", ft_isalnum (102));
 	return(0);

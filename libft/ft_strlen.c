@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jconde-a <jconde-a@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 17:16:46 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/09/13 17:17:03 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/09/27 14:10:12 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 int	ft_strlen(char *str)
 {

@@ -6,7 +6,7 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 20:10:02 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/09/21 10:24:39 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/10/01 10:25:12 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_calloc(size_t count, size_t size)
 		ft_bzero(ptr, count * size);
 		return (ptr);
 	}
-	return (0);
+	return ((void *)0);
 }
 /*int main(void)
 {

@@ -6,7 +6,7 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 19:10:09 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/09/20 19:03:55 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/09/29 11:57:32 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*ptr;
-	size_t	ind;
+	unsigned char	*ptr;
+	size_t			ind;
 
-	ptr = (char *)s;
+	c %= 256;
+	c = (unsigned char) c;
+	ptr = (unsigned char *)s;
 	ind = 0;
-	while ((ind < n) && (*ptr))
+	while (ind < n)
 	{
 		if (*ptr == c)
 			return (ptr);

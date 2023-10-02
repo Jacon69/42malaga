@@ -3,19 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jconde-a <jconde-a@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:18:40 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/09/18 20:52:43 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/09/29 11:58:19 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
+
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
 	char	*p;
 
+	c %= 256;
 	p = (char *)s;
 	while (*p != '\0')
 	{
@@ -23,14 +24,16 @@ char	*ft_strchr(const char *s, int c)
 			return (p);
 		p++;
 	}
+	if (c == '\0')
+		return (p);
 	return (0);
 }
 /* int main (void)
 {
-	char str[20]="Hola Mindo !!";
+	char str[20]="teste";
 	int c;
 
 	c = 'f';
-	printf("esto es lo que devuelve original %s \n", strchr(str, c));
-    printf("esto es lo que devuelve propia  %s \n", ft_strchr(str, c));
+//	printf("esto es lo que devuelve original %s \n", strchr(str, 'e' + 256));
+    printf("esto es lo que devuelve propia  %s \n", ft_strchr(str, 'e' + 256 ));
 }*/
