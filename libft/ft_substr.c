@@ -6,7 +6,7 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 05:44:11 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/10/01 10:28:26 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/10/02 20:25:14 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (lng + 1 > len)
 		lng = len ;
 	substr = (char *)ft_calloc((lng + 1), sizeof(char));
+	if (!substr)
+		return ((void *) 0);
 	ft_memmove(substr, &s[start], lng);
 	return (substr);
 }
