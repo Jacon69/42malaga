@@ -1,6 +1,6 @@
 # Nombre de la biblioteca
 NAME = libft.a
-NAMEB = libft.a
+
 
 #compilador y Opciones de compilacion
 
@@ -15,8 +15,8 @@ ft_atoi.c ft_calloc.c ft_strdup.c ft_isalnum.c ft_substr.c ft_strjoin.c \
 ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
 ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-SOURCEBONUS = ft_lstnew.c 
-# ft_lstadd_front.c
+SOURCEBONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 # Objetos
 OBJ = $(SOURCE:.c=.o)
@@ -26,7 +26,6 @@ OBJB = $(SOURCEBONUS:.c=.o)
 
 all: $(NAME)
 
-bonus: $(NAMEB)
 
 # Regla Principal
 $(NAME): $(OBJ)
@@ -37,8 +36,8 @@ $(OBJ): $(SOURCE)
 	$(CC) $(CFLAG) -c $(SOURCE)
 
 # Regla Bonus
-$(NAMEB): $(OBJ) $(OBJB)
-	ar rcs $(NAMEB) $(OBJ) $(OBJB)
+bonus: $(OBJ) $(OBJB)
+	ar rcs $(NAME) $(OBJ) $(OBJB)
 
 # Regla OBJB
 $(OBJB): $(SOURCEBONUS)
@@ -46,7 +45,7 @@ $(OBJB): $(SOURCEBONUS)
 
 # limpieza
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(OBJB)
 fclean: clean
 	rm -f $(NAME)
 
