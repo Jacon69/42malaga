@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jconde-a <jconde-a@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,11 +12,16 @@
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!*lst)
-    {
-        new->next = *lst->next;
-        *lst = new;
-    }
+	t_list *ptr;
+
+	f(lst->content)
+	ptr = lst-> next;
+	while  (ptr)
+	{
+		f(ptr->content);
+		lst = ptr;
+		ptr = lst-> next;
+	}
 }
