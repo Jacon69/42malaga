@@ -6,12 +6,11 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:18:40 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/09/29 11:03:36 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/10/10 11:47:49 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

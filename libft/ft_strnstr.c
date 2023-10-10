@@ -6,13 +6,11 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 21:39:57 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/10/01 08:35:45 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/10/10 11:47:36 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
+
 #include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)

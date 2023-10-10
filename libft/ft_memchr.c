@@ -6,12 +6,11 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 19:10:09 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/09/29 11:57:32 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/10/10 11:49:38 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

@@ -6,12 +6,11 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 20:37:25 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/09/29 12:04:39 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/10/10 11:49:44 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

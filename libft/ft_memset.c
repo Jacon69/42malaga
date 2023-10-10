@@ -6,13 +6,11 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 17:27:15 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/09/17 09:11:11 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/10/10 09:14:14 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memset(void *ptr, int value, size_t num)
 {

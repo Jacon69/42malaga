@@ -6,13 +6,13 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:02:50 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/09/29 07:38:22 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/10/10 09:29:03 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_1memmov(char *src, char *dst, size_t len)
+void static	ft_1memmov(char *src, char *dst, size_t len)
 {
 	size_t	cont;	
 
@@ -25,7 +25,7 @@ void	ft_1memmov(char *src, char *dst, size_t len)
 	}		
 }
 
-void	ft_2memmov(char *src, char *dst, size_t len)
+void static	ft_2memmov(char *src, char *dst, size_t len)
 {
 	size_t	cont;	
 

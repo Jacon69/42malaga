@@ -6,12 +6,11 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 17:07:43 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/09/17 09:07:53 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/10/10 09:02:13 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

@@ -6,12 +6,11 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 18:28:04 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/10/01 08:09:22 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/10/10 11:49:50 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
