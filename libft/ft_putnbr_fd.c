@@ -6,7 +6,7 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 12:23:16 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/10/10 12:01:09 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/10/12 09:36:39 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int static	ft_long(int nb)
 	return (l);
 }
 
-void 	ft_putnbr_fd(int nb, int fd)
+void	ft_putnbr_fd(int nb, int fd)
 {
 	int	l;
 	int	n;

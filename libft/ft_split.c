@@ -6,7 +6,7 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 08:53:39 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/10/05 05:46:54 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/10/12 09:24:19 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ int static	ft_do_spc(char const *s, char c, int nlnk, char **cad )
 		cad[i] = (char *)ft_calloc((lge + 1), sizeof(char));
 		if (!cad[i])
 		{
-			lge = (nlnk + 1);
+			lge = (i);
 			while (lge-- > 0)
 			{
 				free((char *)cad[lge]);
