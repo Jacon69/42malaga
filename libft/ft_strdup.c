@@ -6,7 +6,7 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 19:18:57 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/10/01 05:31:05 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/10/26 14:05:51 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s1)
 
 	len = ft_strlen((char *)s1);
 	if (!len)
-	{	
+	{
 		ptr = (char *)malloc(sizeof(char));
 		if (!ptr)
 			return (NULL);

@@ -6,26 +6,26 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:02:50 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/10/10 09:29:03 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/10/26 14:05:29 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void static	ft_1memmov(char *src, char *dst, size_t len)
+static void	ft_1memmov(char *src, char *dst, size_t len)
 {
 	size_t	cont;	
 
 	cont = 0;
 	while (cont++ < len)
-	{			
+	{
 		*dst = *src;
 		dst++;
 		src++;
-	}		
+	}
 }
 
-void static	ft_2memmov(char *src, char *dst, size_t len)
+static void	ft_2memmov(char *src, char *dst, size_t len)
 {
 	size_t	cont;	
 
@@ -62,7 +62,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 int	main(void)
 {
 	int num;
-//	char src[100] = "thi\xffs i\xfas \0a g\xde\xadood \0nyan\0cat\0 !\r\n";
+//	char src[100] = "thi\xffs i\xfas \0a 
+g\xde\xadood \0nyan\0cat\0 !\r\n";
 	char src[100] =  "123456789123456789";
 //	char dst[25] ;
 	

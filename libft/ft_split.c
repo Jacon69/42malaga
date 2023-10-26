@@ -6,13 +6,13 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 08:53:39 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/10/12 09:24:19 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/10/26 14:10:45 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int static	cntlnk(char const *s, char c)
+static int	cntlnk(char const *s, char c)
 {
 	int	cnt;
 	int	i;
@@ -37,7 +37,7 @@ int static	cntlnk(char const *s, char c)
 	return (cnt);
 }
 
-void static	ft_fllchain(char const *s, char c, char **cad)
+static void	ft_fllchain(char const *s, char c, char **cad)
 {
 	int	n;
 	int	i;
@@ -63,7 +63,7 @@ void static	ft_fllchain(char const *s, char c, char **cad)
 	}
 }
 
-int	static	ft_cnt_sp_chain(char const *s, char c, int l)
+static int	ft_cnt_sp_chain(char const *s, char c, int l)
 {
 	int	cont;
 	int	i;
@@ -92,7 +92,7 @@ int	static	ft_cnt_sp_chain(char const *s, char c, int l)
 	return (0);
 }
 
-int static	ft_do_spc(char const *s, char c, int nlnk, char **cad )
+static int	ft_do_spc(char const *s, char c, int nlnk, char **cad )
 {
 	int	lge;
 	int	i;
@@ -104,11 +104,11 @@ int static	ft_do_spc(char const *s, char c, int nlnk, char **cad )
 		cad[i] = (char *)ft_calloc((lge + 1), sizeof(char));
 		if (!cad[i])
 		{
-			lge = (i);
+			lge = (i + 1);
 			while (lge-- > 0)
 			{
 				free((char *)cad[lge]);
-			}	
+			}
 			free((char **)cad);
 			return (-1);
 		}

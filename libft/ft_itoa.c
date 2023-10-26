@@ -6,20 +6,20 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 06:01:16 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/10/05 07:43:23 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/10/26 14:03:11 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int static	ft_abs_num(int num)
+static int	ft_abs_num(int num)
 {
 	if (num < 0)
 		return (-1 * num);
 	return (num);
 }
 
-int static	ft_lng(int n)
+static int	ft_lng(int n)
 {
 	int	cnt;
 
@@ -32,7 +32,7 @@ int static	ft_lng(int n)
 	return (cnt);
 }
 
-void static	wr_num(char *num, int pos, int sig, int n)
+static void	wr_num(char *num, int pos, int sig, int n)
 {
 	while (pos >= 0)
 	{
@@ -57,7 +57,7 @@ char	*ft_itoa(int n)
 	if (n == 0)
 		cnt = 1;
 	else
-	{	
+	{
 		cnt = ft_lng(n);
 		if (n < 0)
 			cnt++;

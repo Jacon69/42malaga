@@ -6,13 +6,13 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 12:23:16 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/10/12 09:36:39 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/10/10 12:32:18 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int static	ft_long(int nb)
+static int	ft_long(int nb)
 {
 	int	l;
 

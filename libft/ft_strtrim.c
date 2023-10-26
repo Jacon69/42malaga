@@ -6,7 +6,7 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 06:53:35 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/10/03 15:00:10 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/10/26 14:06:26 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,13 +62,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return ((void *) 0);
 	ft_strlcpy(str2, str, i + 1);
 	return (str2);
-}			
+}
 /* int main (void)
 {
 	char	*cadena = "12121212a" ;
 	char	*borrar = "12"  ;
 	char	*res;
-	// "   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !\n   \n \n \t\t\n  ";
+	// "   \t  \n\n \t\t  \n\n\nHello \t  Please\n 
+	Trim me !\n   \n \n \t\t\n  ";
 	//" \n\t";
 	res = ft_strtrim(cadena, borrar);
 	printf("Este es el resultado: %s \n", res);

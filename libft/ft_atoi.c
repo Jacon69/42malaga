@@ -6,13 +6,13 @@
 /*   By: jconde-a <jconde-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 08:40:39 by jconde-a          #+#    #+#             */
-/*   Updated: 2023/10/09 19:50:48 by jconde-a         ###   ########.fr       */
+/*   Updated: 2023/10/10 12:35:29 by jconde-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char static	*ft_toffsp(char *str)
+static char	*ft_toffsp(char *str)
 {
 	while (((*str > 8) && (*str < 14)) || (*str == 32))
 	{
